@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import img from "../../Assets/img/icons8-google-48.png"
 import { signUpUser } from '../../features/Auth/AuthSlice';
+import { Link } from 'react-router-dom';
 
 function SignUp() {
 
@@ -22,12 +23,8 @@ function SignUp() {
     <div className="">
 
 
-      <div className="signInLogo text-center">
-        <img src="" alt="" />
-        <p className='signInLogoText'>
-          jhsdkdj
-        </p>
-      </div>
+<div className='container signInContainer  w-100' >
+                <div className="signIn w-100">
       <div className="social-button-wrapper mb-1">
         <button className="social-button github">
           <div className="icon">
@@ -54,10 +51,12 @@ function SignUp() {
 
         <p><input type="password" name="email" className="mt-1 auth0-lock-input" placeholder="Password" value={password} onChange={(e)=>{setpassword(e.target.value)}} /></p>
         <p><input type="password" name="email" className="mt-1 auth0-lock-input" placeholder="Comnfirm Password" /></p>
-        <p>Forgot your password?</p>
         <button type='submit' className='signInButtonSubmit' onClick={formData}>Continue<i className="fa-solid fa-angle-right"></i></button>
       </form>
+      <p className="register-link w-100">Already have an account? <Link to="/login">Login</Link></p>
+
     </div>
+    </div></div>
   )
 }
 

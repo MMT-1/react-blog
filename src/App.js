@@ -6,6 +6,8 @@ import PostDetails from './Components/Single/PostDetails';
 import HomePage from './Page/Home/HomePage';
 import Login from './Page/Login/Login';
 import SinglePage from './Page/Single/SinglePage';
+import SignIn from './Components/Login/SignIn';
+import SignUp from './Components/Login/SignUp';
 
 
 function App() {
@@ -17,7 +19,8 @@ function App() {
         <Routes>
           <Route index element={<HomePage />} />
           <Route path={'post/:id'} element={<SinglePage />} />
-          <Route path={'/login'} element={<Login />} />
+          <Route path={'/login'} element={<SignIn />} />
+          <Route path={'/register'} element={<SignUp />} />
         </Routes>
 
       </BrowserRouter>
